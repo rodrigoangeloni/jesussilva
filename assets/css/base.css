@@ -1,0 +1,63 @@
+/* ============================================================
+   base.css — Estilos globales y tipografía
+   DECISIÓN: Montserrat (títulos) + Open Sans (cuerpo)
+   JUSTIFICACIÓN: pairing de Google Fonts con jerarquía clara
+   mantiene legibilidad sanitaria (baseline del plan)
+   ============================================================ */
+html {
+  scroll-behavior: auto; /* el smooth scroll se gestiona en scroll.js */
+  overflow-x: clip; /* DECISIÓN: los gutters de .row pueden exceder el viewport; clip evita scroll horizontal en mobile (medido en DevTools) */
+}
+
+body {
+  font-family: var(--font-texto);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: var(--font-titulos);
+}
+
+p { line-height: 1.6; }
+
+/* DECISIÓN: scroll-margin-top en secciones - JUSTIFICACIÓN: compensa el
+   navbar fixed-top para que el scroll suave aterrice sin tapar títulos
+   (utilidad CSS nativa, requerida por UI nav de Bootstrap) */
+section[id] {
+  scroll-margin-top: var(--altura-navbar);
+}
+
+/* DECISIÓN: focus-visible para accesibilidad al teclado - JUSTIFICACIÓN:
+   WCAG 2.4.7 (focus visible) y buenas prácticas de accesibilidad (ddg) */
+:focus-visible {
+  outline: 3px solid var(--bs-warning);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+
+.bg-fondo-secundario {
+  background-color: var(--color-fondo-secundario);
+}
+
+.section-titulo {
+  font-family: var(--font-titulos);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--color-texto);
+}
+
+.section-subtitulo {
+  font-family: var(--font-texto);
+  font-weight: 400;
+  font-size: 18px;
+  color: #666666;
+}

@@ -1,0 +1,62 @@
+/* ============================================================
+   variables.css — Tokens de diseño
+   Paleta: Blanco + Azul (inspiración VitalCare)
+   ============================================================ */
+:root {
+  --bs-primary: #1565C0;
+  --bs-primary-dark: #0D47A1;
+  --bs-primary-darker: #0A3470;
+  --bs-secondary: #42A5F5;
+  --bs-warning: #F5A623;
+
+  --color-texto: #333333;
+  --color-texto-claro: #666666;
+  --color-fondo: #FFFFFF;
+  --color-fondo-secundario: #F7F9FC;
+  --color-borde: #E8EDF2;
+  --color-whatsapp: #25D366;
+  --color-estrellas: #FFD700;
+
+  --font-titulos: 'Montserrat', sans-serif;
+  --font-texto: 'Open Sans', sans-serif;
+
+  --altura-navbar: 72px;
+}
+
+/* Clases utilitarias */
+.bg-primary-custom {
+  background-color: var(--bs-primary) !important;
+}
+
+.bg-primary-dark {
+  background-color: var(--bs-primary-dark) !important;
+}
+
+.bg-primary-darker {
+  background-color: var(--bs-primary-darker) !important;
+}
+
+.text-primary-custom {
+  color: var(--bs-primary) !important;
+}
+
+.btn-primary-custom {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary-dark);
+  --bs-btn-hover-border-color: var(--bs-primary-dark);
+  --bs-btn-active-bg: var(--bs-primary-darker);
+  --bs-btn-active-border-color: var(--bs-primary-darker);
+  color: #fff !important;
+}
+
+.btn-outline-primary-custom {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  color: var(--bs-primary) !important;
+}

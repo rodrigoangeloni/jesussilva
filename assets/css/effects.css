@@ -1,0 +1,103 @@
+/* ============================================================
+   effects.css — Efectos de interacción
+   ============================================================ */
+
+/* ---------- HERO: fade-in al cargar ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.hero-foto-wrap {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* ---------- HOVER: cards de servicios ---------- */
+.card-servicio {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-servicio:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(21, 101, 192, 0.12);
+}
+
+.card-servicio:hover .icon-circle {
+  transform: scale(1.1);
+}
+
+/* ---------- HOVER: pasos del proceso ---------- */
+.timeline-paso .numero-paso {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline-paso:hover .numero-paso {
+  transform: scale(1.12);
+  background-color: var(--bs-secondary);
+}
+
+/* ---------- HOVER: testimonios (estrellas) ---------- */
+.estrellas i { transition: transform 0.3s ease; }
+.estrellas i:hover { transform: scale(1.2); }
+
+/* ---------- SCROLL-REVEAL (desde reveal.js) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal[data-delay="1"] { transition-delay: 0.1s; }
+.reveal[data-delay="2"] { transition-delay: 0.2s; }
+.reveal[data-delay="3"] { transition-delay: 0.3s; }
+.reveal[data-delay="4"] { transition-delay: 0.4s; }
+
+/* ---------- NAVBAR DINÁMICA ---------- */
+.navbar.navbar-scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- WHATSAPP PULSE ---------- */
+@keyframes pulseWhatsapp {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.boton-whatsapp {
+  animation: pulseWhatsapp 3s infinite;
+}
+
+/* ---------- REDUCED MOTION (WCAG 2.3.3) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .boton-whatsapp { animation: none !important; }
+}

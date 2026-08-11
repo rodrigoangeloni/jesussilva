@@ -135,11 +135,20 @@
 }
 
 @media (max-width: 991.98px) {
+  .hero-foto-wrap {
+    height: auto;
+    padding-top: 2rem;
+  }
+
+  .hero-foto-wrap img {
+    max-width: 300px;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+  }
+
   .hero-diagonal {
-    width: 350px;
-    height: 100%;
-    top: 0;
-    right: -40px;
+    display: none;
   }
 }
 

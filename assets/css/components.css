@@ -137,17 +137,17 @@
 @media (max-width: 991.98px) {
   .hero {
     min-height: auto;
-    padding-top: calc(var(--altura-navbar) + 1rem);
-    padding-bottom: 2rem;
+    padding-top: calc(var(--altura-navbar) + 0.5rem);
+    padding-bottom: 1rem;
   }
 
   .row.min-vh-100 {
-    min-height: auto;
+    min-height: auto !important;
   }
 
   .hero-foto-wrap {
     height: auto;
-    padding: 1rem 0;
+    padding: 0.25rem 0;
   }
 
   .hero-foto-wrap img {

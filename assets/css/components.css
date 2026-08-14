@@ -180,7 +180,7 @@
   background: var(--color-fondo);
   border: 1px solid var(--color-borde);
   border-radius: 16px;
-  padding: 2.5rem 1.5rem;
+  padding: 2.5rem 1.75rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
@@ -220,14 +220,18 @@
 .card-servicio .card-text {
   font-family: var(--font-texto);
   font-weight: 400;
-  font-size: 15px;
-  color: var(--color-texto-claro);
-  line-height: 1.7;
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.75;
+  text-align: left;
+  max-width: 36ch;
   margin-bottom: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-servicio .btn-servicio {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--bs-primary);
   text-decoration: none;

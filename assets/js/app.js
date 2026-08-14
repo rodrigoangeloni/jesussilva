@@ -317,6 +317,7 @@ const WHATSAPP_NUM = '595972836732';
 /* Validacion del formulario + envio a WhatsApp */
 function initValidacion() {
   const form = document.getElementById('form-consulta');
+  const feedback = document.getElementById('form-feedback');
   if (!form) return;
 
   /* Validacion al enviar */
@@ -335,9 +336,11 @@ function initValidacion() {
       const email = form.querySelector('#campo-email').value.trim();
       const mensaje = form.querySelector('#campo-mensaje').value.trim();
 
-      const texto = `Hola Lic. Silva, soy ${nombre} (${email}). ${mensaje}`;
-      const url = `https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent(texto)}`;
-      window.open(url, '_blank', 'noopener');
+       const contacto = email ? ` (${email})` : '';
+       const texto = `Hola Lic. Silva, soy ${nombre}${contacto}. ${mensaje}`;
+       const url = `https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent(texto)}`;
+       window.open(url, '_blank', 'noopener');
+       if (feedback) feedback.hidden = false;
     },
     false,
   );

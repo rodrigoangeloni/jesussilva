@@ -182,13 +182,13 @@
             <div class="row g-3">
               <div class="col-12">
                 <label for="campo-nombre" class="form-label">Nombre completo</label>
-                <input type="text" class="form-control" id="campo-nombre" placeholder="Tu nombre y apellido" required>
+                <input type="text" class="form-control" id="campo-nombre" placeholder="Tu nombre y apellido" autocomplete="name" required>
                 <div class="invalid-feedback">Por favor, ingresa tu nombre completo.</div>
               </div>
               <div class="col-12">
-                <label for="campo-email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="campo-email" placeholder="tu@email.com" required>
-                <div class="invalid-feedback">Por favor, ingresa un email valido.</div>
+                <label for="campo-email" class="form-label">Email <span class="text-muted fw-normal">(opcional)</span></label>
+                <input type="email" class="form-control" id="campo-email" placeholder="tu@email.com" autocomplete="email">
+                <div class="invalid-feedback">Por favor, revisa el formato del email.</div>
               </div>
               <div class="col-12">
                 <label for="campo-mensaje" class="form-label">Mensaje</label>
@@ -197,8 +197,11 @@
               </div>
               <div class="col-12">
                 <button class="btn btn-primary-custom w-100 py-3" type="submit">
-                  <i class="bi bi-whatsapp me-2"></i>Enviar por WhatsApp
+                  <i class="bi bi-whatsapp me-2"></i>Continuar por WhatsApp
                 </button>
+                <p id="form-feedback" class="form-feedback mb-0" role="status" aria-live="polite" hidden>
+                  Se abrió WhatsApp con tu consulta preparada. Si no se abrió, podés escribir directamente al <a href="https://wa.me/595972836732" target="_blank" rel="noopener">+595 972 836732</a>.
+                </p>
               </div>
             </div>
           </form>
@@ -207,8 +210,8 @@
           <h3 class="info-titulo">Informacion de Contacto</h3>
           <ul class="list-unstyled lista-contacto mt-4">
             <li><i class="bi bi-geo-alt-fill"></i><span><strong>Direccion:</strong> Consultas a domicilio · Lambaré, Paraguay</span></li>
-            <li><i class="bi bi-whatsapp"></i><span><strong>WhatsApp:</strong> +595 972 836732</span></li>
-            <li><i class="bi bi-envelope-fill"></i><span><strong>Email:</strong> fisiojesussilva@gmail.com</span></li>
+                <li><i class="bi bi-whatsapp"></i><span><strong>WhatsApp:</strong> <a href="https://wa.me/595972836732" target="_blank" rel="noopener">+595 972 836732</a></span></li>
+                <li><i class="bi bi-envelope-fill"></i><span><strong>Email:</strong> <a href="mailto:fisiojesussilva@gmail.com">fisiojesussilva@gmail.com</a></span></li>
             <li><i class="bi bi-clock-fill"></i><span><strong>Horarios:</strong> Lun-Vie 9:00-20:00, Sab 9:00-13:00</span></li>
           </ul>
           <div class="mapa-placeholder">
